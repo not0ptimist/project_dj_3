@@ -1,0 +1,20 @@
+site_name: Django 4, itproger
+
+site_dir: 'wiki/'
+
+nav:
+
+    - index: index.md
+    - pip install: pip.md
+    - questions: questions.md
+    
+    # - models: blog/models.md
+    # - templates: blog/templates.md
+    # - urls: blog/urls.md
+    # - view: blog/view.md
+
+dev_addr:
+    127.0.0.1:8200
+
+site_author:
+    Рыжиков Егор
