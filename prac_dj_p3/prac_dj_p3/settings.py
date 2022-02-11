@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # прописанные 'blog.apps.BlogConfig'
     'blog',
+    'news',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'prac_dj_p3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db_news.sqlite3',
     }
 }
 
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-us'#ru
 
 #TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Yekaterinburg'

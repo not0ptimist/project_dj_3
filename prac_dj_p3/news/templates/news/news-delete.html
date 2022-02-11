@@ -1,0 +1,14 @@
+{% extends "templates_dj_p3/base.html" %}
+
+{% block title %}Удаление новости{% endblock %}
+
+{% block body %}
+    <div class="features">
+        <h1>Вы удаляете новость:</h1>
+        <h2>{{ article.title }}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-success" type="submit">Удалить новость</button>
+        </form>
+    </div>
+{% endblock %}

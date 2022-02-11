@@ -1,0 +1,22 @@
+{% extends "templates_dj_p3/base.html" %}
+
+
+
+{% block body %}
+    <div class="features">
+        <h1>{% block title %}Новости на сайте{% endblock %}</h1>
+        <p>Subaru is the automobile manufacturing division of Japanese transportation conglomerate Subaru Corporation, the twenty-first largest automaker by production worldwide in 2017. Subaru cars are known for their use of a boxer engine layout in most vehicles above 1500 cc.</p>
+        <button class="btn btn-warning">На страницу про нас</button>
+        {% if news %}
+            {% for title_news in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ title_news.title }}</h3>
+                    <p>{{title_news.anons}}</p>
+                    <a href="{% url 'user-news-detail' title_news.id %}" class="btn btn-warning">Detail</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Сейчас нет новостей</p>
+        {% endif %}
+    </div>
+{% endblock %}

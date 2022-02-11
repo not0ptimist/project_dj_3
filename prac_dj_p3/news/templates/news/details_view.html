@@ -1,0 +1,15 @@
+{% extends "templates_dj_p3/base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block body %}
+    <div class="features">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.date }}</p>
+        <p>{{ article.full_text }}</p>
+        <div>
+            <a href="{% url 'user-news-edit' article.id %}" class="btn btn-success" type="">Исправить новость</a>
+            <a href="{% url 'user-news-delete' article.id %}" class="btn btn-danger" type="">Удалить новость</a>            
+        </div>
+    </div>
+{% endblock %}

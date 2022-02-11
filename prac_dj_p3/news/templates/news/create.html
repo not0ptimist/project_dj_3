@@ -1,0 +1,28 @@
+{% extends "templates_dj_p3/base.html" %}
+
+{% block title %}Форма создания новости{% endblock %}
+
+{% block body %}
+
+    <div class="features">
+        <h1>Форма создания новости</h1>
+        <!-- проверка данных будет в том же методе что и шаблон create_news, и учим метод пост -->
+        <form method="post">
+            {% csrf_token %}
+            <!-- выводим весь объект form, из нашего forms.py  
+            {{ form }}-->
+            {{ form.title }}
+            {{ form.anons }}
+            {{ form.full_text }}
+            {{ form.date }}{# 2022-02-11 19:54:20 #}
+            <span>{{ error }}</span>
+            <!-- <input type="text" placeholder="Название новости" class="form-control"><br>
+            <input type="text" placeholder="Анонс новости" class="form-control"><br>
+            <textarea class="form-control" placeholder="Текст новости"></textarea><br>
+            <input type="date" class="form-control"><br>
+            <input type="time" class="form-control"><br> -->
+            <button class="btn btn-success" type="submit">Добавить новость</button>
+            <!-- в данном случае обязательно кнопка submit, для перезагрузки страницы, и отправка в бд -->
+        </form>
+    </div>
+{% endblock %}
